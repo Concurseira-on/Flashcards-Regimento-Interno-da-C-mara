@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revisão – Lógica Proposicional</title>
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --panel:#ffffff;
+      --ink:#0f172a;
+      --muted:#475569;
+      --brand:#2563eb;
+      --accent:#0ea5e9;
+      --border:#e2e8f0;
+      --radius:16px;
+      --shadow:0 8px 24px rgba(2,6,23,.08);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto;background:var(--bg);color:var(--ink)}
+    .layout{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+    aside{background:#fff;border-right:1px solid var(--border);padding:18px;position:sticky;top:0;height:100vh}
+    main{padding:24px;max-width:1100px}
+    h1{font-size:22px;margin:0 0 12px}
+    h2{margin-top:0}
+    section{background:var(--panel);border:1px solid var(--border);border-radius:var(--radius);padding:20px;margin-bottom:16px;box-shadow:var(--shadow)}
+    nav a{display:block;padding:8px 10px;border-radius:10px;color:var(--ink);text-decoration:none;margin-bottom:4px}
+    nav a:hover{background:#eff6ff}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{border:1px solid var(--border);padding:10px;vertical-align:top}
+    th{background:linear-gradient(90deg,#dbeafe,#bfdbfe);text-align:left}
+    tbody tr:nth-child(even){background:#f1f5f9}
+    .note{background:#f0f9ff;border-left:4px solid var(--brand);padding:10px 12px;border-radius:10px;margin-top:10px}
+    .pill{display:inline-block;padding:4px 10px;border-radius:999px;background:#eff6ff;color:#1d4ed8;font-size:12px;border:1px solid #dbeafe}
+    ul,ol{padding-left:20px}
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside>
+      <h1>🧠 Lógica Proposicional</h1>
+      <nav>
+        <a href="#prop">📌 Proposição</a>
+        <a href="#nao-prop">❌ Não proposições</a>
+        <a href="#negacao">🔄 Negação</a>
+        <a href="#abertas">🔓 Sentenças abertas</a>
+        <a href="#principios">📐 Princípios lógicos</a>
+        <a href="#classificacao">🧩 Classificação</a>
+        <a href="#conectivos">🔗 Conectivos</a>
+        <a href="#precedencia">⏫ Precedência</a>
+      </nav>
+    </aside>
+
+    <main>
+      <section id="prop">
+        <h2>📌 Proposição <span class="pill">conceito básico</span></h2>
+        <p>É uma <b>sentença declarativa</b> que pode ser julgada como <b>verdadeira (V)</b> ou <b>falsa (F)</b>, mas nunca ambas ao mesmo tempo.</p>
+        <ul>
+          <li>Ex.: <i>O Brasil fica na América.</i> (V)</li>
+          <li>Ex.: <i>A Lua é de queijo.</i> (F)</li>
+        </ul>
+      </section>
+
+      <section id="nao-prop">
+        <h2>❌ Frases que NÃO são proposições</h2>
+        <table>
+          <thead><tr><th>Tipo</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>Exclamativa</td><td>Boa sorte!</td></tr>
+            <tr><td>Interrogativa</td><td>Que horas são?</td></tr>
+            <tr><td>Imperativa</td><td>Estude mais.</td></tr>
+            <tr><td>Sem verbo</td><td>O livro de Carlos.</td></tr>
+            <tr><td>Sentença aberta</td><td>Ele é um bom aluno.</td></tr>
+            <tr><td>Optativa</td><td>Deus te acompanhe.</td></tr>
+            <tr><td>Paradoxal</td><td>Eu estou mentindo.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="negacao">
+        <h2>🔄 Negação de proposição</h2>
+        <p>Negar é <b>inverter o valor lógico</b>, mantendo o sentido da frase.</p>
+        <p><b>Símbolo:</b> ¬ ou ~</p>
+        <ul>
+          <li>p: Maria é feliz.</li>
+          <li>¬p: Maria <b>não</b> é feliz.</li>
+        </ul>
+        <div class="note">
+          <b>Lei da dupla negação:</b> ¬(¬p) = p<br>
+          <i>“É mentira que Carlos não é religioso” ⇔ Carlos é religioso.</i>
+        </div>
+      </section>
+
+      <section id="abertas">
+        <h2>🔓 Sentenças abertas</h2>
+        <p>Não possuem valor lógico definido. <b>Não são proposições.</b></p>
+        <ul>
+          <li>Uso de pronomes: <i>Aquela cidade fica no RJ.</i></li>
+          <li>Variável matemática: <i>x + 4 = 7</i></li>
+        </ul>
+        <p><b>Atenção:</b> se houver <b>quantificador</b> (∀ ou ∃), passa a ser proposição.</p>
+      </section>
+
+      <section id="principios">
+        <h2>📐 Princípios fundamentais da lógica</h2>
+        <ul>
+          <li><b>Identidade:</b> o que é verdadeiro é verdadeiro.</li>
+          <li><b>Não contradição:</b> não pode ser V e F ao mesmo tempo.</li>
+          <li><b>Terceiro excluído:</b> ou é V ou é F.</li>
+        </ul>
+      </section>
+
+      <section id="classificacao">
+        <h2>🧩 Classificação das proposições</h2>
+        <table>
+          <thead><tr><th>Tipo</th><th>Descrição</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>Simples (atômica)</td><td>Uma única ideia, sem conectivos</td><td>João é cantor.</td></tr>
+            <tr><td>Composta</td><td>Duas ou mais proposições ligadas</td><td>João é cantor e Maria é feliz.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="conectivos">
+        <h2>🔗 Conectivos lógicos</h2>
+        <table>
+          <thead><tr><th>Conectivo</th><th>Nome</th><th>Símbolo</th><th>Leitura</th></tr></thead>
+          <tbody>
+            <tr><td>e</td><td>Conjunção</td><td>∧</td><td>p e q</td></tr>
+            <tr><td>ou</td><td>Disjunção</td><td>∨</td><td>p ou q</td></tr>
+            <tr><td>ou...ou</td><td>Disjunção exclusiva</td><td>⊻</td><td>ou p ou q</td></tr>
+            <tr><td>se... então</td><td>Condicional</td><td>→</td><td>se p, então q</td></tr>
+            <tr><td>se, e somente se</td><td>Bicondicional</td><td>↔</td><td>p sse q</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="precedencia">
+        <h2>⏫ Ordem de precedência dos conectivos lógicos</h2>
+        <p class="note">A leitura deve respeitar a prioridade dos conectivos. Quando houver dúvida, use parênteses.</p>
+        <ol>
+          <li><b>Negação</b> — ¬ ou ~</li>
+          <li><b>Conjunção</b> — ∧ (e)</li>
+          <li><b>Disjunção</b> — ∨ (ou) <span class="pill">vale o que aparecer primeiro</span></li>
+          <li><b>Condicional</b> — → (se… então)</li>
+          <li><b>Bicondicional</b> — ↔ (se, e somente se)</li>
+        </ol>
+        <div class="note">
+          🔎 <b>Resumo visual:</b> ¬  →  ∧ / ∨  →  →  →  ↔ <br>
+          ✍️ Ex.: ¬p ∧ q → r ↔ s = (((¬p) ∧ q) → r) ↔ s
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
